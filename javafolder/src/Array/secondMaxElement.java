@@ -1,24 +1,18 @@
 public class secondMaxElement {
     public static void main(String[] args) {
-        int max = Integer.MIN_VALUE;
-        int secondMax = Integer.MIN_VALUE;
-        int[] arr = {1, 2, 4, 90, 60, 50};
-
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > max) {
-                max = arr[i];
-                //second max element
-            }
+    int[] num ={5, 8, 2, 6, 9};
+    int largest = num[0];
+    int secondLargest = num[0];
+    for(int i=1;i<num.length;i++){
+        if(num[i]>largest){
+            largest=num[i];
         }
-            for ( int i = 0; i < arr.length; i++) {
-                if (arr[i] > secondMax && arr[i] != max) {
-                    secondMax = arr[i];
-                }
-            }
-                System.out.println("max element is : " + max);
-                System.out.println("second max element is : " + secondMax);
-            }
+    }
+    for(int i=0;i<num.length;i++){
+        if(num[i]>secondLargest && num[i] !=largest){
+            secondLargest=num[i];
         }
-
-
-
+    }
+        System.out.println("the second largest element is " +secondLargest);
+    }
+}
